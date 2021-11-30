@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="310dp">
+
+    <!-- CARD 01-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="170dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgCurso"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="10dp"
+        android:elevation="2dp"
+        android:src="@drawable/ic_temporario"
+        app:layout_constraintLeft_toLeftOf="@id/card"
+        app:layout_constraintRight_toRightOf="@id/card"
+        app:layout_constraintTop_toTopOf="@id/card" />
+
+    <TextView
+        android:id="@+id/nomeCurso"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:text="Titulo do curso anunciado aqui."
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/card"
+        app:layout_constraintRight_toRightOf="@id/card"
+        app:layout_constraintTop_toBottomOf="@id/imgCurso" />
+
+    <TextView
+        android:id="@+id/descricaoCurso"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:text="Curso de curso para quem quer curso e ter curso no curso assim para curso."
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@id/card"
+        app:layout_constraintRight_toRightOf="@id/card"
+        app:layout_constraintTop_toBottomOf="@id/nomeCurso"
+        android:maxLines="3"/>
+
+    <TextView
+        android:id="@+id/notaCurso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:elevation="2dp"
+        android:text="4,8"
+        android:textColor="@color/AzulPrimario"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/descricaoCurso"
+        app:layout_constraintTop_toBottomOf="@id/descricaoCurso" />
+
+    <ImageView
+        android:id="@+id/estrela_1"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="2dp"
+        android:elevation="2dp"
+        android:src="@drawable/ic_estrela"
+        app:layout_constraintBottom_toBottomOf="@id/notaCurso"
+        app:layout_constraintLeft_toRightOf="@id/notaCurso"
+        app:layout_constraintTop_toTopOf="@id/notaCurso"
+        app:tint="@color/AzulPrimario" />
+
+    <ImageView
+        android:id="@+id/estrela_2"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:elevation="2dp"
+        android:src="@drawable/ic_estrela"
+        app:layout_constraintBottom_toBottomOf="@id/notaCurso"
+        app:layout_constraintLeft_toRightOf="@id/estrela_1"
+        app:layout_constraintTop_toTopOf="@id/notaCurso"
+        app:tint="@color/AzulPrimario" />
+
+    <ImageView
+        android:id="@+id/estrela_3"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:elevation="2dp"
+        android:src="@drawable/ic_estrela"
+        app:layout_constraintBottom_toBottomOf="@id/notaCurso"
+        app:layout_constraintLeft_toRightOf="@id/estrela_2"
+        app:layout_constraintTop_toTopOf="@id/notaCurso"
+        app:tint="@color/AzulPrimario" />
+
+    <ImageView
+        android:id="@+id/estrela_4"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:elevation="2dp"
+        android:src="@drawable/ic_estrela"
+        app:layout_constraintBottom_toBottomOf="@id/notaCurso"
+        app:layout_constraintLeft_toRightOf="@id/estrela_3"
+        app:layout_constraintTop_toTopOf="@id/notaCurso"
+        app:tint="@color/AzulPrimario" />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:elevation="2dp"
+        android:src="@drawable/ic_estrela"
+        app:layout_constraintBottom_toBottomOf="@id/notaCurso"
+        app:layout_constraintLeft_toRightOf="@id/estrela_4"
+        app:layout_constraintTop_toTopOf="@id/notaCurso"
+        app:tint="@color/AzulPrimario" />
+
+    <TextView
+        android:id="@+id/valorCurso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:text="R$ 99,00"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/notaCurso"
+        app:layout_constraintRight_toRightOf="@id/descricaoCurso"
+        app:layout_constraintTop_toTopOf="@id/notaCurso" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
