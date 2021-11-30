@@ -1,4 +1,4 @@
-package com.br.capacitap4mobile2.Model
+package com.br.capacita.Model
 
 data class Curso(
     val nome: String,
