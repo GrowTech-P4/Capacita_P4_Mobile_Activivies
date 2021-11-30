@@ -1,4 +1,4 @@
-package com.br.capacitap4mobile2.Model
+package com.br.capacita.Model
 
 import com.google.gson.annotations.SerializedName
 

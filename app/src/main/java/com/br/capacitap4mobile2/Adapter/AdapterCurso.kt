@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.br.capacitap4mobile2.Model.Curso
+import com.br.capacita.Model.Curso
 import com.br.capacitap4mobile2.R
 import com.squareup.picasso.Picasso
 

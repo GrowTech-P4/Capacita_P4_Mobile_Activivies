@@ -6,10 +6,11 @@ import android.os.Bundle
 import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.br.capacita.Interfaces.CursoService
+import com.br.capacita.Model.Curso
 import com.br.capacitap4mobile2.Adapter.AdapterCurso
 import com.br.capacitap4mobile2.Connection.RetrofitClient
-import com.br.capacitap4mobile2.Interfaces.CursoService
-import com.br.capacitap4mobile2.Model.Curso
+
 import com.br.capacitap4mobile2.R
 import retrofit2.Call
 import retrofit2.Callback
