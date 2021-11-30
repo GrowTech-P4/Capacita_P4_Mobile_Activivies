@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.br.capacita.Interfaces.CursoService
@@ -43,7 +44,7 @@ class MainActivity : AppCompatActivity() {
 
         //REQUISICAO DO RETROFIT
         val responseCursos = RetrofitClient.abrirConexao(CursoService::class.java)
-        responseCursos.getCurso().enqueue(object : Callback<List<Curso>> {
+        responseCursos.getCurso().enqueue(object : Callback<List<Curso>>, AdapterCurso.ClickCurso {
             override fun onResponse(
                 call: Call<List<Curso>>,
                 response: Response<List<Curso>>
@@ -57,9 +58,13 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 //CONFIGURAR O ADAPTER
-                val adapterCurso = AdapterCurso(context, listaCursos)
+                val adapterCurso = AdapterCurso(context, listaCursos, this)
                 recylerView_cursos.adapter = adapterCurso
 
+            }
+
+            override fun clickCurso(curso: Curso) {
+                println("Clicando....!!!! ${curso.descricao}")
             }
 
             override fun onFailure(call: Call<List<Curso>>, t: Throwable) {
@@ -67,5 +72,6 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
+
     }
 }

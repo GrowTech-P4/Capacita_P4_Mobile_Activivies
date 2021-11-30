@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".View.CursoDetalheActivity"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EAEBED">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textTituloDoCurso"
+            android:layout_width="0dp"
+            android:layout_height="63dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Excel COMPLETO do Básico ao  Avançado."
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/textValorCurso"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="R$ 99"
+            android:textColor="@color/AzulApp"
+            android:textSize="36dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textNomeDaInstituicaoCurso2" />
+
+        <TextView
+            android:id="@+id/textTiposDeficiencia"
+            android:layout_width="0dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Disponível para:"
+            android:textColor="@color/AzulApp"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+        <TextView
+            android:id="@+id/textInicioTermino"
+            android:layout_width="0dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Data de inicio - data de término:"
+            android:textColor="@color/AzulApp"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textMudez" />
+
+        <TextView
+            android:id="@+id/textlocalDoCurso"
+            android:layout_width="0dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Local do Curso:"
+            android:textColor="@color/AzulApp"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textDataCurso" />
+
+        <TextView
+            android:id="@+id/textDataCurso"
+            android:layout_width="0dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="31/10/2021  -  28/12/2021"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInicioTermino" />
+
+        <TextView
+            android:id="@+id/textNomeDaInstituicaoCurso"
+            android:layout_width="0dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Faculdade Católica Imaculada Conceição "
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textlocalDoCurso" />
+
+        <TextView
+            android:id="@+id/textNomeDaInstituicaoCurso3"
+            android:layout_width="0dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Inscrições até o dia 28/10/2021"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textValorCurso" />
+
+        <TextView
+            android:id="@+id/textNomeDaInstituicaoCurso2"
+            android:layout_width="0dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/poppins"
+            android:text="Rua Argemiro Miranda 126 - IPSEP"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textNomeDaInstituicaoCurso" />
+
+        <TextView
+            android:id="@+id/textDescricaoDoCurso"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/poppins"
+            android:text="Adeus procrastinação, aprenda agora. Seja mestre em excel."
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textTituloDoCurso" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="84dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/qualificacurso"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.09"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textDescricaoDoCurso" />
+
+        <TextView
+            android:id="@+id/textVisual"
+            android:layout_width="60dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/black"
+            android:fontFamily="@font/poppins_bold"
+            android:paddingStart="13dp"
+            android:paddingTop="1dp"
+            android:paddingEnd="9dp"
+            android:paddingBottom="1dp"
+            android:text="Visual"
+            android:textColor="@color/CinzaFundo"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toStartOf="@+id/textAuditivo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textTiposDeficiencia" />
+
+        <TextView
+            android:id="@+id/textAuditivo"
+            android:layout_width="60dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/black"
+            android:fontFamily="@font/poppins_bold"
+            android:paddingStart="5dp"
+            android:paddingTop="1dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="1dp"
+            android:text="Auditivo"
+            android:textColor="@color/CinzaFundo"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toStartOf="@+id/textMudez"
+            app:layout_constraintStart_toEndOf="@+id/textVisual"
+            app:layout_constraintTop_toBottomOf="@+id/textTiposDeficiencia" />
+
+        <TextView
+            android:id="@+id/textMudez"
+            android:layout_width="60dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/black"
+            android:fontFamily="@font/poppins_bold"
+            android:paddingStart="14dp"
+            android:paddingTop="1dp"
+            android:paddingEnd="9dp"
+            android:paddingBottom="1dp"
+            android:text="Mudez"
+            android:textColor="@color/CinzaFundo"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toStartOf="@+id/textFisico"
+            app:layout_constraintStart_toEndOf="@+id/textAuditivo"
+            app:layout_constraintTop_toBottomOf="@+id/textTiposDeficiencia" />
+
+        <TextView
+            android:id="@+id/textFisico"
+            android:layout_width="60dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/black"
+            android:fontFamily="@font/poppins_bold"
+            android:paddingStart="15dp"
+            android:paddingTop="1dp"
+            android:paddingEnd="9dp"
+            android:paddingBottom="1dp"
+            android:text="Físico"
+            android:textColor="@color/CinzaFundo"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toStartOf="@+id/textMental"
+            app:layout_constraintStart_toEndOf="@+id/textMudez"
+            app:layout_constraintTop_toBottomOf="@+id/textTiposDeficiencia" />
+
+        <TextView
+            android:id="@+id/textMental"
+            android:layout_width="60dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="30dp"
+            android:background="@color/black"
+            android:fontFamily="@font/poppins_bold"
+            android:paddingStart="13dp"
+            android:paddingEnd="9dp"
+            android:text="Mental"
+            android:textColor="@color/CinzaFundo"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/textFisico"
+            app:layout_constraintTop_toBottomOf="@+id/textTiposDeficiencia" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="353dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Inscreva-se agora"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textNomeDaInstituicaoCurso3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+
+
