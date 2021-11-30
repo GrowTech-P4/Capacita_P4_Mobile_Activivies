@@ -13,4 +13,8 @@
 .externalNativeBuild
 .cxx
 local.properties
+<<<<<<< HEAD
 dea/misc.xml
+=======
+/.idea/misc.xml
+>>>>>>> bea3402efcaac9f80016c0e478e1a5ed43f3c469
