@@ -1,6 +1,6 @@
-package com.br.capacitap4mobile2.Interfaces
+package com.br.capacita.Interfaces
 
-import com.br.capacitap4mobile2.Model.Curso
+import com.br.capacita.Model.Curso
 import retrofit2.Call
 import retrofit2.http.GET
 

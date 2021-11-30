@@ -1,33 +1,36 @@
-package com.br.capacitap4mobile2.Model
+package com.br.capacita.Model
 
 import com.google.gson.annotations.SerializedName
 
 data class UsuarioPCD(
     @SerializedName("_id")
-    val _id: String,
+    var _id: String?,
     @SerializedName("nome")
-    val nome: String,
+    var nome: String,
     @SerializedName("email")
-    val email: String,
+    var email: String,
     @SerializedName("senha")
-    val senha: String,
+    var senha: String,
     @SerializedName("data_nascimento")
-    val dataNascimento: String,
+    var dataNascimento: String,
     @SerializedName("telefone")
-    val telefone: String,
+    var telefone: String,
     @SerializedName("cpf")
-    val cpf: String,
+    var cpf: String,
     @SerializedName("endereco")
-    val endereco: String,
+    var endereco: String,
     @SerializedName("numero")
-    val numero: Int,
+    var numero: String,
     @SerializedName("cep")
-    val cep: Int,
+    var cep: String,
     @SerializedName("link_foto")
-    val link_foto: String? = "",
+    var link_foto: String? = "",
     @SerializedName("bairro")
-    val bairro: String,
-    @SerializedName("tipoDeficiencia")
-    val tipoDeficiencia: MutableList<TipoDeficiencia>
+    var bairro: String,
+    @SerializedName("tipoDeficiencia_ID")
+    var tipoDeficiencia_ID: MutableList<TipoDeficiencia>,
+
+    var token: String
+
 
 )
