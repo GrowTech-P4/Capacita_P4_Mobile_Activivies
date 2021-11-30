@@ -13,6 +13,9 @@
         android:theme="@style/Theme.CapacitaP4Mobile2"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".View.CursoDetalheActivity"
+            android:exported="false" />
+        <activity
             android:name=".View.CadastroActivity"
             android:exported="false" />
         <activity
