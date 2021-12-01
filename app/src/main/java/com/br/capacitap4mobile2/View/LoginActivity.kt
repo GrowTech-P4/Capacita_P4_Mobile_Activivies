@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import com.br.capacita.Controller.LoginController
+import com.br.capacita.Model.Login
 import com.br.capacita.Model.TipoDeficiencia
 import com.br.capacita.Model.UsuarioPCD
 import com.br.capacitap4mobile2.R
@@ -43,7 +44,9 @@ class LoginActivity : AppCompatActivity() {
                 mutableListOf<TipoDeficiencia>(),
                 ""
             )
+
             LoginController().login(user)
+
             Toast.makeText(this, "Login Efetuado com sucesso", Toast.LENGTH_LONG).show()
 
             val home = Intent(this, MainActivity::class.java)

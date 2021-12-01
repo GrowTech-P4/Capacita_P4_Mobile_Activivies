@@ -6,4 +6,7 @@ data class Login (
     @SerializedName("usuarioPCD")
     var usuarioPCD:UsuarioPCD,
 
-    var token:String)
+    var token:String,
+
+    var message:String
+    )

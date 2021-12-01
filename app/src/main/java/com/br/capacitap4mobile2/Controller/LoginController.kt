@@ -10,24 +10,33 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class LoginController {
-    fun login(user:UsuarioPCD):String{
-        var message:String = ""
-        val responseUsuario = RetrofitClient.abrirConexao(LoginInterface::class.java)
-        responseUsuario.login(user).enqueue(object : Callback<Login>{
-            override fun onResponse(call: Call<Login>, response: Response<Login>) {
-                user.token = response.body()!!.token
-                user.nome = response.body()!!.usuarioPCD.nome
-                user.email = response.body()!!.usuarioPCD.email
-                println(response.body())
+    fun login(user: UsuarioPCD): String {
+        lateinit var message: String
+        message = ""
 
-                println("TOKEN >>> ${user.token} ${user.nome} ${user.email}")
+        val responseUsuario = RetrofitClient.abrirConexao(LoginInterface::class.java)
+        responseUsuario.login(user).enqueue(object : Callback<Login> {
+            override fun onResponse(call: Call<Login>, response: Response<Login>) {
+                val teste = response.body()
+                if (teste == null) {
+                    message = "Email ou senha Inválido, tente novamente"
+
+                } else {
+                    user.token = response.body()!!.token
+                    user.nome = response.body()!!.usuarioPCD.nome
+                    user.email = response.body()!!.usuarioPCD.email
+                    println(response.body())
+                    message = "Login efetuado com sucesso"
+                }
+                println("${user.token} ${user.nome} ${user.email}")
             }
 
             override fun onFailure(call: Call<Login>, t: Throwable) {
-                message = t.toString()
+                println("ERRO >>>>>>>>>> ${t}")
             }
 
         })
+        println("MENSAGEM >>>>>>>>>>>>>>" + message)
         return message
     }
 }
