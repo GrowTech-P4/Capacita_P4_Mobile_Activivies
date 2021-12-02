@@ -29,7 +29,7 @@ class AdapterCurso(val context: Context, val cursos: MutableList<Curso>, var cli
             .into(holder.img)
         holder.nome.text = cursos[position].nome
         holder.descricao.text = cursos[position].descricao
-        holder.valor.text = cursos[position].valor
+        holder.valor.text = "R$ " + cursos[position].valor
 
         holder.cardView.setOnClickListener{
             clickCurso.clickCurso(curso)
