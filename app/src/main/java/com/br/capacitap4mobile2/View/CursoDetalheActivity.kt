@@ -30,6 +30,7 @@ class CursoDetalheActivity : AppCompatActivity() {
         val txtDataConclusao = findViewById<TextView>(R.id.textDataCurso)
         val txtNomeInstituicao = findViewById<TextView>(R.id.textNomeDaInstituicaoCurso)
         val txtValorCurso = findViewById<TextView>(R.id.textValorCurso)
+        val txtEnderecoInstituicao = findViewById<TextView>(R.id.textInstituicaoEndereco)
 
         val intentCurso = intent.extras?.getParcelable<Curso>("curso")
 
@@ -40,6 +41,7 @@ class CursoDetalheActivity : AppCompatActivity() {
             .into(imgViewCurso) ?: "http://10.0.2.2:3000/files/curso.png"
         txtDataConclusao.text = intentCurso?.dataConclusao ?: "Não informado"
         txtNomeInstituicao.text = "FALTA INCLUIR RETORNO DO NOME DO CURSO"
+        txtEnderecoInstituicao.text = "FALTA INCLUIR RETORNO DE ENDEREÇO INST."
         txtValorCurso.text = "R$ " + intentCurso?.valor ?: "0,0"
 
 

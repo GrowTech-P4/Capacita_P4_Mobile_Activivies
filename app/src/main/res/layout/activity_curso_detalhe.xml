@@ -53,7 +53,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textNomeDaInstituicaoCurso2" />
+            app:layout_constraintTop_toBottomOf="@+id/textInstituicaoEndereco" />
 
         <TextView
             android:id="@+id/textTiposDeficiencia"
@@ -146,7 +146,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textValorCurso" />
 
         <TextView
-            android:id="@+id/textNomeDaInstituicaoCurso2"
+            android:id="@+id/textInstituicaoEndereco"
             android:layout_width="0dp"
             android:layout_height="22dp"
             android:layout_marginStart="30dp"
