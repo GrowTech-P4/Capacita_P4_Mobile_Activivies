@@ -1,6 +1,9 @@
 package com.br.capacita.Model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
+
 
 data class UsuarioPCD(
     @SerializedName("_id")
@@ -27,10 +30,10 @@ data class UsuarioPCD(
     var link_foto: String? = "",
     @SerializedName("bairro")
     var bairro: String,
-    @SerializedName("tipoDeficiencia_ID")
+   @SerializedName("tipoDeficiencia_ID")
     var tipoDeficiencia_ID: MutableList<TipoDeficiencia>,
 
-    var token: String
+    var token: String? = ""
 
 
 )

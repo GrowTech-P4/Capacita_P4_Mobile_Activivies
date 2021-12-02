@@ -100,6 +100,7 @@ class CadastroActivity : AppCompatActivity() {
                 cep,
                 "",
                 bairro,
+
                 tipoDeficiencias,
                 ""
             )

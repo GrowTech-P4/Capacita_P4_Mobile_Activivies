@@ -13,7 +13,8 @@ data class Curso(
     val duracao: String,
     val valor: String? = "R$ 0,00",
     val dataConclusao: String,
-    val img_curso: String = ""/*,
-    val perguntas: MutableList<Perguntas>? = mutableListOf<Perguntas>(),
-    val usuarioPCD: MutableList<UsuarioPCD>? = mutableListOf<UsuarioPCD>()*/
+    val img_curso: String = "",
+
+    val perguntas: @RawValue MutableList<String>?,
+    val usuarioPCD: @RawValue MutableList<String>?
 ): Parcelable

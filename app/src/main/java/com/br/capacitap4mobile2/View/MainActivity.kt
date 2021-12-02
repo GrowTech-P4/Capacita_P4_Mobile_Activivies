@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.br.capacita.Interfaces.CursoService
 import com.br.capacita.Model.Curso
+import com.br.capacita.Model.TipoDeficiencia
+import com.br.capacita.Model.UsuarioPCD
 import com.br.capacitap4mobile2.Adapter.AdapterCurso
 import com.br.capacitap4mobile2.Connection.RetrofitClient
 
@@ -27,6 +29,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
+
 
         //RECUPERAR O RECYCLERVIEW DO LAYOUT
         val recylerView_cursos = findViewById<RecyclerView>(R.id.recylerView_cursos1)
@@ -79,6 +82,7 @@ class MainActivity : AppCompatActivity() {
     fun abrirDetalheCurso(curso: Curso) {
         val detalheCurso = Intent(this, CursoDetalheActivity::class.java)
         detalheCurso.putExtra("curso", curso)
+
         startActivity(detalheCurso)
     }
 }
