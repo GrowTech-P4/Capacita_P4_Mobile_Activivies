@@ -6,6 +6,7 @@ import kotlinx.android.parcel.RawValue
 
 @Parcelize
 data class Curso(
+    val _id:String,
     val nome: String,
     val descricao: String,
     val cargaHoraria: String,

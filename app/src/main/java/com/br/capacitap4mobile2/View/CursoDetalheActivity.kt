@@ -42,6 +42,7 @@ class CursoDetalheActivity : AppCompatActivity() {
                 startActivity(home)
             } else {
                 println("SESSION MANAGER CURSO DETALHE ACTIVITY " + sessionManager.fetchAuthToken())
+                println("ID CURSO DETALHE ACTIVITY = " + intentCurso?._id)
             }
         }
 
