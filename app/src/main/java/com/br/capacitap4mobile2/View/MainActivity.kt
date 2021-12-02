@@ -30,14 +30,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
-
         carrossel()
-
     }
 
     override fun onResume() {
         super.onResume()
-
         carrossel()
     }
 

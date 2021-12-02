@@ -15,25 +15,33 @@ import com.br.capacitap4mobile2.Controller.SessionManager
 import com.br.capacitap4mobile2.R
 import com.google.gson.Gson
 import com.squareup.picasso.Picasso
+import org.w3c.dom.Text
 
 class CursoDetalheActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_curso_detalhe)
 
+        //PREENCHIMENTO DOS CAMPOS
+        val botao = findViewById<Button>(R.id.button)
         val txtTituloCurso = findViewById<TextView>(R.id.textTituloDoCurso)
         val txtDescricaoCurso = findViewById<TextView>(R.id.textDescricaoDoCurso)
         val imgViewCurso = findViewById<ImageView>(R.id.imageView2)
+        val txtDataConclusao = findViewById<TextView>(R.id.textDataCurso)
+        val txtNomeInstituicao = findViewById<TextView>(R.id.textNomeDaInstituicaoCurso)
+        val txtValorCurso = findViewById<TextView>(R.id.textValorCurso)
 
         val intentCurso = intent.extras?.getParcelable<Curso>("curso")
 
-        txtTituloCurso.text = intentCurso?.nome
-        txtDescricaoCurso.text = intentCurso?.descricao
+        txtTituloCurso.text = intentCurso?.nome ?: "Não informado"
+        txtDescricaoCurso.text = intentCurso?.descricao ?: "Não informado"
         Picasso.get()
             .load(intentCurso?.img_curso)
-            .into(imgViewCurso)
+            .into(imgViewCurso) ?: "http://10.0.2.2:3000/files/curso.png"
+        txtDataConclusao.text = intentCurso?.dataConclusao ?: "Não informado"
+        txtNomeInstituicao.text = "FALTA INCLUIR RETORNO DO NOME DO CURSO"
+        txtValorCurso.text = "R$ " + intentCurso?.valor ?: "0,0"
 
-        val botao = findViewById<Button>(R.id.button)
 
         val sessionManager = SessionManager(this)
         botao.setOnClickListener {
