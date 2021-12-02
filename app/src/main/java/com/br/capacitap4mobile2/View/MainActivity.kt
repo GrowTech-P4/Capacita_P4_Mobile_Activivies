@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        supportActionBar?.hide()
 
         val conta = findViewById<ImageView>(R.id.ic_conta)
         conta.setOnClickListener {
@@ -30,7 +31,17 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        carrossel()
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        carrossel()
+    }
+
+    fun carrossel() {
         //RECUPERAR O RECYCLERVIEW DO LAYOUT
         val recylerView_cursos = findViewById<RecyclerView>(R.id.recylerView_cursos1)
 
@@ -76,7 +87,6 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
-
     }
 
     fun abrirDetalheCurso(curso: Curso) {
