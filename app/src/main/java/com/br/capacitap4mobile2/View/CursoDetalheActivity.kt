@@ -13,6 +13,7 @@ import com.br.capacita.Model.TipoDeficiencia
 import com.br.capacita.Model.UsuarioPCD
 import com.br.capacitap4mobile2.Controller.SessionManager
 import com.br.capacitap4mobile2.R
+import com.google.gson.Gson
 import com.squareup.picasso.Picasso
 
 class CursoDetalheActivity : AppCompatActivity() {
@@ -42,6 +43,10 @@ class CursoDetalheActivity : AppCompatActivity() {
                 startActivity(home)
             } else {
                 println("SESSION MANAGER CURSO DETALHE ACTIVITY " + sessionManager.fetchAuthToken())
+                val gson = Gson()
+                val json = sessionManager.fetchAuthToken()
+                val a = gson.fromJson(json, UsuarioPCD::class.java)
+                println("ID DA SESSION>>>>>>>>>>>"+a._id)
                 println("ID CURSO DETALHE ACTIVITY = " + intentCurso?._id)
             }
         }

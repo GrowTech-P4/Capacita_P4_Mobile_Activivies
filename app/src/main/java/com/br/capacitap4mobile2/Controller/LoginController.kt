@@ -9,6 +9,7 @@ import com.br.capacitap4mobile2.Connection.RetrofitClient
 import com.br.capacitap4mobile2.Controller.SessionManager
 import com.br.capacitap4mobile2.View.CursoDetalheActivity
 import com.br.capacitap4mobile2.View.LoginActivity
+import com.google.gson.Gson
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -36,7 +37,9 @@ class LoginController {
                     user.email = response.body()!!.usuarioPCD.email
                     user._id = response.body()!!.usuarioPCD._id
                     message = "Login efetuado com sucesso"
-                    sessionManager.saveAuthToken(response.body()!!.token)
+                    val gson = Gson()
+                    val json = gson.toJson(user)
+                    sessionManager.saveAuthToken(json)
                 }
                 println("CONTROLLER LOGIN >>>>>>${user._id} ${user.token} ${user.nome} ${user.email}")
             }
