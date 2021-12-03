@@ -7,15 +7,13 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import com.br.capacita.Controller.LoginController
 import com.br.capacita.Model.Curso
-import com.br.capacita.Model.TipoDeficiencia
 import com.br.capacita.Model.UsuarioPCD
+import com.br.capacitap4mobile2.Controller.InscCursoController
 import com.br.capacitap4mobile2.Controller.SessionManager
 import com.br.capacitap4mobile2.R
 import com.google.gson.Gson
 import com.squareup.picasso.Picasso
-import org.w3c.dom.Text
 
 class CursoDetalheActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,8 +54,10 @@ class CursoDetalheActivity : AppCompatActivity() {
                 val gson = Gson()
                 val json = sessionManager.fetchAuthToken()
                 val a = gson.fromJson(json, UsuarioPCD::class.java)
-                println("ID DA SESSION>>>>>>>>>>>"+a._id)
-                println("ID CURSO DETALHE ACTIVITY = " + intentCurso?._id)
+                println("ID USUARIO >>>>>>>>>> " + a._id)
+                println("ID CURSO >>>>>>>>>> " + intentCurso!!._id)
+                InscCursoController().inscCurso("Bearer " + a.token!!,intentCurso._id!!)
+
             }
         }
 
