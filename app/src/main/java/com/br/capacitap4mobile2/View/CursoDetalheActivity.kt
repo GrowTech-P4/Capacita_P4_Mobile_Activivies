@@ -20,6 +20,9 @@ class CursoDetalheActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_curso_detalhe)
 
+        val login = Intent(this, LoginActivity::class.java)
+        val home = Intent(this, MainActivity::class.java)
+
         //PREENCHIMENTO DOS CAMPOS
         val botao = findViewById<Button>(R.id.button)
         val txtTituloCurso = findViewById<TextView>(R.id.textTituloDoCurso)
@@ -47,14 +50,14 @@ class CursoDetalheActivity : AppCompatActivity() {
         botao.setOnClickListener {
             if (sessionManager.fetchAuthToken() == null) {
                 Toast.makeText(this, "Necessário Efetuar Login", Toast.LENGTH_LONG).show()
-                val home = Intent(this, LoginActivity::class.java)
-                startActivity(home)
+                startActivity(login)
             } else {
                 val gson = Gson()
                 val json = sessionManager.fetchAuthToken()
                 val a = gson.fromJson(json, UsuarioPCD::class.java)
                 InscCursoController().inscCurso("Bearer " + a.token!!,intentCurso!!._id)
-
+                Toast.makeText(this, "Usuário inscrito no Curso: " + intentCurso.nome + " com SUCESSO!!!", Toast.LENGTH_LONG).show()
+                startActivity(home)
             }
         }
 
