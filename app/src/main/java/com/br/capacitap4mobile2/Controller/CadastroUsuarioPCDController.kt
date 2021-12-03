@@ -14,16 +14,11 @@ class CadastroUsuarioPCDController {
         val responseUsuario = RetrofitClient.abrirConexao(UsuarioPCDService::class.java)
         responseUsuario.createUser(user).enqueue(object : Callback<UsuarioPCD>{
             override fun onResponse(call: Call<UsuarioPCD>, response: Response<UsuarioPCD>) {
-                println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>usuario cadastrado<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
-                println(response.body())
-                println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
             }
 
             override fun onFailure(call: Call<UsuarioPCD>, t: Throwable) {
                 message = t.toString()
-                println("ERRO=======================$t")
             }
-
         })
 
 

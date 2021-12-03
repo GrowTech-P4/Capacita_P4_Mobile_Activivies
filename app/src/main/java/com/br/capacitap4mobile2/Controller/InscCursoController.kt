@@ -13,12 +13,10 @@ class InscCursoController {
         responseUsuario.inscCurso(token,_idCurso).enqueue(object : Callback<Curso> {
             override fun onResponse(call: Call<Curso>, response: Response<Curso>) {
                 val teste = response.body()
-                println("RESPONSE "+teste)
-
             }
 
             override fun onFailure(call: Call<Curso>, t: Throwable) {
-                println("ERRO CONTROLLER INSCRICAO CURSO >>>>>>>>>> ${t}")
+
             }
 
         })

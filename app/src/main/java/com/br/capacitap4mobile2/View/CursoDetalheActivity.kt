@@ -50,13 +50,10 @@ class CursoDetalheActivity : AppCompatActivity() {
                 val home = Intent(this, LoginActivity::class.java)
                 startActivity(home)
             } else {
-                println("SESSION MANAGER CURSO DETALHE ACTIVITY " + sessionManager.fetchAuthToken())
                 val gson = Gson()
                 val json = sessionManager.fetchAuthToken()
                 val a = gson.fromJson(json, UsuarioPCD::class.java)
-                println("ID USUARIO >>>>>>>>>> " + a._id)
-                println("ID CURSO >>>>>>>>>> " + intentCurso!!._id)
-                InscCursoController().inscCurso("Bearer " + a.token!!,intentCurso._id!!)
+                InscCursoController().inscCurso("Bearer " + a.token!!,intentCurso!!._id)
 
             }
         }

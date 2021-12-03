@@ -104,7 +104,6 @@ class CadastroActivity : AppCompatActivity() {
                 tipoDeficiencias,
                 ""
             )
-            println("clicado")
             CadastroUsuarioPCDController().cadastro(user)
             Toast.makeText(this, "Usuario cadastrado com sucesso", Toast.LENGTH_LONG).show()
 

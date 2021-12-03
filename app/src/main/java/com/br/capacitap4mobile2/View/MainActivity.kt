@@ -75,12 +75,10 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun clickCurso(curso: Curso) {
-                println("Clicando....!!!! ${curso.descricao}")
                 abrirDetalheCurso(curso)
             }
 
             override fun onFailure(call: Call<List<Curso>>, t: Throwable) {
-                println("FALHA>>>>>>>>>>>>>>>>>>>>>>>> ${t.message}")
             }
 
         })
@@ -89,7 +87,6 @@ class MainActivity : AppCompatActivity() {
     fun abrirDetalheCurso(curso: Curso) {
         val detalheCurso = Intent(this, CursoDetalheActivity::class.java)
         detalheCurso.putExtra("curso", curso)
-
         startActivity(detalheCurso)
     }
 }

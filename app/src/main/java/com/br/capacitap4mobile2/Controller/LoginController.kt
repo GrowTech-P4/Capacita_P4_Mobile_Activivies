@@ -18,11 +18,7 @@ class LoginController {
     fun login(user: UsuarioPCD, context: Context): UsuarioPCD {
         lateinit var message: String
         message = ""
-  /*      val taskService: LoginInterface = RetrofitClient.abrirConexao(LoginInterface::class.java)
-        val call:Call<Login> = taskService.login(user)
-        val teste:Login? = call.execute().body()
-        println(teste)
-*/
+
         val sessionManager = SessionManager(context)
         val responseUsuario = RetrofitClient.abrirConexao(LoginInterface::class.java)
         responseUsuario.login(user).enqueue(object : Callback<Login> {
@@ -41,11 +37,9 @@ class LoginController {
                     val json = gson.toJson(user)
                     sessionManager.saveAuthToken(json)
                 }
-                println("CONTROLLER LOGIN >>>>>>${user._id} ${user.token} ${user.nome} ${user.email}")
             }
 
             override fun onFailure(call: Call<Login>, t: Throwable) {
-                println("ERRO >>>>>>>>>> ${t}")
             }
 
         })
